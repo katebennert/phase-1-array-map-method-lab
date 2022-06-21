@@ -12,5 +12,17 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
-}
+  return tutorials.map(title => title.split(" ")).map(words => words.map(word => (word[0].toUpperCase() + word.substring(1))).join(" "));
+ }
+
+/*
+Your job is to write the following function:
+
+- `titleCased()`: returns an array with title case tutorial names. Note that
+  this function takes no arguments and should use the global `tutorials`
+  variable as data.
+
+**NOTE:** This lab is challenging! You will need to iterate through the
+`tutorials` array, modifying the name of each tutorial. To do this, you will
+**also** need to access and modify each individual word.
+*/
